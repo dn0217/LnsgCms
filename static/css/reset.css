@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+html {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif, \5b8b\4f53;
+	-webkit-text-size-adjust: 100%; 			/*  禁止浏览器自动调节字体大小  */
+	-webkit-tap-highlight-color: transparent; 	/*  a标签点击取消默认底色 */
+	/*-webkit-user-select: none; 					/*  禁止选择文本  */*/
+}
+body {
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch; 			/*  回弹 */
+}
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+i,em {
+	font-style: normal;
+}
+img {
+	border: 0;
+	display: block;
+	vertical-align: middle;
+	width: 100%;
+}
+input {
+	-webkit-appearance: none;
+	outline: none;
+	border: none;
+}
+li, ol {
+	list-style: none;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0;
+	clear: both;
+}
+.por {
+	position: relative;
+}
+.poa {
+	position: absolute;
+}
+.container{
+    width:1200px;
+    height:1500px;
+    margin:20px auto 0;
+    background: #fff;
+    margin-top:100px;
+    margin-bottom: 18px;
+  }
