@@ -27,7 +27,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 8090,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -38,7 +38,28 @@ module.exports = {
             pathRewrite: {
 　　　　　　  '^/ueditor': '/ueditor'
             }
-        }
+        },
+        '/nav': {
+            target: 'http://dnxiu.com/', 
+            changeOrigin:true,
+            pathRewrite: {
+                '^/nav': '/nav'
+            }
+        },
+        '/acticle': {
+            target: 'http://dnxiu.com/',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/acticle': '/acticle'
+            },
+        },
+        '/users': {
+            target: 'http://dnxiu.com/',
+            changeOrigin: true,
+            pathRewrite: {
+                '^/users': '/users'
+            },
+        },
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
