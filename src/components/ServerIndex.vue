@@ -3,10 +3,8 @@
 		<div class="acticleInfo">
 			<input type="text" placeholder="作者" v-model="author">
 			<input type="text" placeholder="文章标题" v-model="acticleTitle">
-			<select name="" id="" id="test">
-				<option value="1">前端</option>
-				<option value="2">服务端</option>
-				<option value="3">杂谈</option>
+			<select name=""  v-model="index">
+				<option :value="index+1" v-for="(item, index) in options">{{ item.text }}</option>
 			</select>
 		</div>
 		<div class="ServerIndex">
@@ -27,7 +25,9 @@ export default {
 		    	initialFrameHeight: 550
 			},
 			author:'',
-			acticleTitle:''
+			acticleTitle:'',
+			index: 1,
+			options:[{value:1, text: '前端'}, {value:2, text: '服务端'}, {value: 3, text: '杂谈'}]
    		}
     },
 
@@ -41,29 +41,28 @@ export default {
 	methods: {
 		fb(){
 			let content = this.$refs.ue.getUEContent();
-			let myselect = document.getElementById('test');
-			let index = myselect.selectedIndex; 
 			let time = new Date().getTime();
 
 			let data = {
 				author: this.author,
 				title: this.acticleTitle,
 				content: content,
-				type: myselect.options[index].value,
+				type: this.index,
 				time: time,
 				note: content
 			}
-			
 			this.api.addActicle(data).then(res => {
 				console.log(res)
 			})
 		}
 	},
-
+	
 	computed: {
     	...mapGetters([
       		'isLogin'
     	])
+
+    	
   	},
 
 

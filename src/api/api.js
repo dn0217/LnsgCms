@@ -26,10 +26,9 @@ export default {
     postLogin(param) {
       return axios.post('/users', param)
     },
-
+    
     addActicle(param){
       return axios.post('/acticle/addActicle', param)
     }
-
 }
 

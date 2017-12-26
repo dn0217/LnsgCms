@@ -21,10 +21,11 @@
 				navInfo:[
 					{
 						title:'资料管理',
-						
+
 						field:[
 							{
 								childTitle:'类目1',
+								
 								childField:['类目1-1', '类目1-2', '类目1-3', '类目1-4', '类目1-5']
 							},
 							{
@@ -76,6 +77,9 @@
 				navIndexShow:[],
 				navChildShow:[]
 			}
+		},
+		mounted(){
+			
 		},
 
 		methods:{
